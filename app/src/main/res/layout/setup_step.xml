@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One numbered step of the restricted-settings setup card (bound in MainActivity.bindStep). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/step_badge"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="@drawable/bg_step_badge"
+        android:gravity="center"
+        android:textColor="#FFFFFFFF"
+        android:textStyle="bold"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/step_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp" />
+
+        <!-- What Android will show at this step (current step only). -->
+        <ImageView
+            android:id="@+id/step_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:maxHeight="220dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_step_image"
+            android:padding="1dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/step_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <!-- Optional secondary action (step 2: "No ⋮ menu? Redo step 1"). -->
+        <Button
+            android:id="@+id/step_alt"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

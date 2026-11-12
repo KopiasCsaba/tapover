@@ -1,0 +1,1 @@
+Configurable tap overlay that opens the right app over another app.

@@ -1,0 +1,33 @@
+# Gradle / build
+.gradle/
+build/
+**/build/
+captures/
+
+# Android / IDE
+local.properties
+.android-debug/
+*.iml
+.idea/
+.cxx/
+
+# OS
+.DS_Store
+
+# Scratch
+tmp/
+
+# Eclipse / Buildship
+.project
+.settings/
+.classpath
+
+# Agent/tool working files
+.paul/
+docs/superpowers/
+.superpowers
+# Signed release APKs
+dist/
+
+# Local settings (signing key location)
+.env

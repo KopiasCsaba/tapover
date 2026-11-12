@@ -1,0 +1,25 @@
+// Dev-only helper: installs a picked APK through the PackageInstaller session API with a chosen
+// package source, to test TapOver's restricted-settings onboarding for store vs. file installs.
+// Only part of the build with -PwithTestInstaller (see settings.gradle / `make test-installer`).
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'net.kopias.tapover.testinstaller'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
+
+    defaultConfig {
+        applicationId 'net.kopias.tapover.testinstaller'
+        minSdk 33
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

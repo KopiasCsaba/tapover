@@ -1,0 +1,8 @@
+First public release (1.0.0).
+
+• Presets: put a dot, rounded square or live thumbnail over any app and choose what a tap does.
+• Tap actions: open the newest photo or video in a folder, or launch any app.
+• Draggable live preview; separate or rotation-fixed portrait/landscape positions.
+• Shows only while the target app is in front.
+• Optional lock-screen mode with a padlock instead of your photo.
+• Google Camera template.

@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'net.kopias.tapover'
+    compileSdk 35
+    // Pin to the build-tools shipped complete in the cirruslabs/android-sdk:35 image. AGP 8.6
+    // defaults to 34.0.0, which that image carries only as an empty stub — without this pin a
+    // clean container build tries to fetch 34.0.0 from Google's repo and stalls if egress is slow.
+    buildToolsVersion '35.0.0'
+
+    defaultConfig {
+        applicationId 'net.kopias.tapover'
+        minSdk 29
+        targetSdk 35
+        versionCode 2
+        versionName '1.0.0'
+    }
+
+    // Don't embed the (encrypted, Google-only) dependency metadata blob in the APK: it's opaque
+    // to users and makes the build non-reproducible/non-inspectable for F-Droid.
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
+    buildFeatures {
+        // BuildConfig.DEBUG gates the privacy-sensitive per-event logs (see detect/DebugLog).
+        buildConfig true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+// Debug builds get an ever-increasing versionCode so a newer debug APK always installs over an older
+// one: `make debug` passes -PdebugVersionCode=<git commit count>. Release keeps the static values in
+// defaultConfig (F-Droid reads those).
+def debugVersionCode = project.findProperty('debugVersionCode')
+androidComponents {
+    onVariants(selector().withBuildType('debug')) { variant ->
+        if (debugVersionCode) {
+            int vc = Math.max((debugVersionCode as String).toInteger(), android.defaultConfig.versionCode + 1)
+            variant.outputs.each { out ->
+                out.versionCode.set(vc)
+                out.versionName.set("${android.defaultConfig.versionName}-dev.${vc}")
+            }
+        }
+    }
+}
+
+dependencies {
+    // No third-party dependencies — TapOver uses only the Android framework
+    // to stay minimal and avoid transitive (e.g. Kotlin) libraries.
+}

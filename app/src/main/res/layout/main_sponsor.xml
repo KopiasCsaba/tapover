@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- List footer under the presets: an unobtrusive invitation to support development
+     (opens the GitHub Sponsors page in the browser; no tracking). Bound in ui/SponsorCard. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="24dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_sponsor_card"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="9dp"
+            android:background="@drawable/bg_sponsor_icon"
+            android:src="@drawable/ic_heart"
+            android:tint="@color/sponsor_accent"
+            android:importantForAccessibility="no" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sponsor_title"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/sponsor_text"
+                android:textSize="13sp"
+                android:textColor="?android:attr/textColorSecondary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_sponsor"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/bg_sponsor_button"
+            android:drawableStart="@drawable/ic_heart_small"
+            android:drawableTint="@color/sponsor_on_accent"
+            android:drawablePadding="6dp"
+            android:text="@string/sponsor_button"
+            android:textColor="@color/sponsor_on_accent"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</FrameLayout>

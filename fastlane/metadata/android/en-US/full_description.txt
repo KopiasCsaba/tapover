@@ -1,0 +1,22 @@
+TapOver draws a small, configurable overlay on top of an app you choose, and routes a tap to a useful action. It is meant to fix the common problem where an app has a hard-coded button that points somewhere broken.
+
+The motivating case: on GrapheneOS the Pixel Camera works well, but its gallery thumbnail tries to open Google Photos, which isn't installed. With TapOver you place a tap target over that button and instead open your real gallery — or the latest photo directly.
+
+How it works:
+
+- A "preset" binds a target app to an overlay and a tap action.
+- The overlay can be a circle or a rounded square, with a configurable size, position, and content: a solid color, a built-in icon, or a thumbnail of your latest photo.
+- On tap, TapOver can open the latest photo or video from a folder you pick in your system viewer (or an app you choose), or launch an app you pick.
+- The overlay appears only while the target app is in the foreground and disappears otherwise.
+
+Privacy and footprint:
+
+- Foreground detection uses an accessibility service that reads only the foreground app's package name to decide when to show the overlay. It does not read or collect screen content.
+- It is event-driven, so it uses effectively no battery while the target app isn't running.
+- No network access, no analytics, no Google/proprietary dependencies. Plain Java, GPLv3.
+
+Permissions:
+
+- Draw over other apps (SYSTEM_ALERT_WINDOW): to show the overlay.
+- Accessibility service: to know which app is in the foreground.
+- Read media images: only if you use the "open latest image" action or an image thumbnail overlay.

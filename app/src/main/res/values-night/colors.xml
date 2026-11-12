@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Lighter green so the checkmark stays legible on the dark DeviceDefault background. -->
+    <color name="permission_granted">#81C784</color>
+    <!-- Sponsor card (GitHub Sponsors pink): accent, card fill, card outline, text on the accent pill. -->
+    <color name="sponsor_accent">#F778BA</color>
+    <color name="sponsor_card_bg">#2A1A23</color>
+    <color name="sponsor_card_stroke">#5A2C45</color>
+    <color name="sponsor_on_accent">#2B0A1C</color>
+</resources>

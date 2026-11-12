@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Everything above the presets: added as the list's (non-selectable) header so the whole page
+     scrolls together; the restricted-settings setup card can be taller than the screen. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!-- Android 13+: step-by-step help for the "restricted setting" block on APK-file installs
+         (accessibility; draw-over-apps too on Android 15+). First on the page: nothing below works
+         until it's done. Shown while a protected permission is missing; see SetupCard.update. -->
+    <LinearLayout
+        android:id="@+id/setup_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_setup_card"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/setup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setup_title"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/setup_intro"
+            android:text="@string/setup_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <include android:id="@+id/setup_step1" layout="@layout/setup_step" />
+        <include android:id="@+id/setup_step2" layout="@layout/setup_step" />
+        <include android:id="@+id/setup_step3" layout="@layout/setup_step" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/permissions_title"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Overlay permission -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/status_overlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btn_grant_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grant_overlay_permission" />
+        <TextView
+            android:id="@+id/check_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_granted_check"
+            android:textColor="@color/permission_granted"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:contentDescription="@string/cd_permission_granted"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Android 15+ restricted install: the Grant button is disabled until the setup card is done. -->
+    <TextView
+        android:id="@+id/overlay_locked_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setup_overlay_locked"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="13sp"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone" />
+
+    <!-- Accessibility service -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/status_accessibility"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btn_grant_accessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enable_accessibility_service" />
+        <TextView
+            android:id="@+id/check_accessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_granted_check"
+            android:textColor="@color/permission_granted"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:contentDescription="@string/cd_permission_granted"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Media permission -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/status_media"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btn_grant_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grant_media_permission" />
+        <TextView
+            android:id="@+id/check_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_granted_check"
+            android:textColor="@color/permission_granted"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:contentDescription="@string/cd_permission_granted"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/presets_title"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_add_preset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_preset" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_presets"
+        android:gravity="center"
+        android:padding="24dp" />
+
+</LinearLayout>

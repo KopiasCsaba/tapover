@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex "com\\.android.*"
+                includeGroupByRegex "com\\.google.*"
+                includeGroupByRegex "androidx.*"
+            }
+        }
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "TapOver"
+include ':app'
+
+// Dev-only test installer (installs an APK with a chosen package source). Opt-in so the app's own
+// and F-Droid builds are unaffected: `make test-installer` passes -PwithTestInstaller.
+if (startParameter.projectProperties.containsKey('withTestInstaller')) {
+    include ':testinstaller'
+    project(':testinstaller').projectDir = file('tools/testinstaller')
+}

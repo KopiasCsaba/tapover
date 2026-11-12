@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TapOver</string>
+    <string name="cd_navigate_up">Navigate up</string>
+    <string name="editor_title_new">New preset</string>
+    <string name="editor_title_edit">Edit preset</string>
+
+    <!-- Permissions -->
+    <string name="permissions_title">Permissions</string>
+    <string name="grant_overlay_permission">Grant</string>
+    <string name="enable_accessibility_service">Enable</string>
+    <string name="grant_media_permission">Grant</string>
+    <string name="overlay_permission_granted">Draw over apps: granted</string>
+    <string name="overlay_permission_missing">Draw over apps: not granted</string>
+    <string name="accessibility_enabled">Accessibility service: enabled</string>
+    <string name="accessibility_disabled">Accessibility service: not enabled</string>
+    <string name="media_permission_granted">Read media: granted</string>
+    <string name="media_permission_missing">Read media: not granted</string>
+    <string name="permission_granted_check">✓</string>
+    <string name="cd_permission_granted">Granted</string>
+
+    <!-- Preset list -->
+    <string name="presets_title">Presets</string>
+    <string name="add_preset">Add</string>
+    <string name="no_presets">No presets yet. Tap \"Add\" to create one.</string>
+    <string name="delete">Delete</string>
+
+    <!-- Editor -->
+    <string name="editor_load_template">Load template</string>
+    <string name="editor_load_template_title">Load template values</string>
+    <string name="editor_name">Name</string>
+    <string name="editor_target_package">Target package</string>
+    <string name="editor_target_activity">Target activities</string>
+    <string name="editor_size">Size (px)</string>
+    <string name="editor_x">X (% of width)</string>
+    <string name="editor_y">Y (% of height)</string>
+    <string name="editor_same_both">Same position in portrait and landscape</string>
+    <string name="editor_show_on_lock">Also show on the lock screen (e.g. camera opened while locked)</string>
+    <string name="editor_show_on_lock_hint">Visible on the lock screen as a lock icon.</string>
+    <string name="editor_lock_confirm_title">Show on lock screen</string>
+    <string name="editor_lock_confirm_message">The overlay will also appear when the phone is locked, showing only a lock icon until you unlock. Tapping it opens the chosen app, which normally asks you to unlock first, but some apps can show content on the lock screen. Only enable this if you trust the app this preset opens.</string>
+    <string name="editor_lock_confirm_enable">Enable</string>
+    <string name="editor_orient_portrait">Portrait</string>
+    <string name="editor_orient_landscape">Landscape</string>
+    <string name="editor_show_on_screen">Show preview overlay</string>
+    <string name="editor_show_need_perm">Grant the overlay permission to preview</string>
+    <string name="editor_rotate_landscape">Rotate the phone to preview landscape</string>
+    <string name="editor_rotate_portrait">Rotate the phone to preview portrait</string>
+    <string name="stepper_decrease">Decrease %1$s</string>
+    <string name="stepper_increase">Increase %1$s</string>
+    <string name="editor_corner">Corner radius (px)</string>
+    <string name="editor_color">Color (#AARRGGBB hex)</string>
+    <string name="editor_content">Overlay content</string>
+    <string name="editor_icon">System icon</string>
+    <string name="editor_pick_app">Pick app</string>
+    <string name="editor_pick_activity">Add activity</string>
+    <string name="editor_pick_activity_title">Add target activity</string>
+    <string name="editor_activity_any">Any activity</string>
+    <string name="editor_activity_any_hint">Shows on every screen of this app. Add activities to limit it.</string>
+    <string name="editor_activity_remove_desc">Remove %1$s</string>
+    <string name="editor_activity_detected">Detected now: %1$s</string>
+    <string name="editor_error_pick_app_first">Set the target package first</string>
+    <string name="editor_error_read_activities">Couldn\'t read activities for %1$s</string>
+    <string name="editor_pick_folder">Pick folder</string>
+    <string name="editor_folder_none">(no folder — tap Pick folder)</string>
+    <string name="editor_pick_color">Pick color</string>
+    <string name="editor_action">Tap action</string>
+    <string name="editor_action_package">Action: app package (launch)</string>
+    <string name="editor_action_folder">Action: media folder (open latest)</string>
+    <string name="editor_not_saved">Not saved: %1$s</string>
+    <string name="editor_error_target">Target package is required</string>
+    <string name="editor_error_action_package">Action app package is required for Launch app</string>
+    <string name="editor_error_target_not_installed">Target app %1$s is not installed</string>
+    <string name="editor_error_action_not_installed">Action app %1$s is not installed</string>
+    <string name="editor_error_folder_missing">Pick an image folder first</string>
+    <string name="editor_error_folder_unsupported">Pick a folder on the device storage (not a cloud or app folder)</string>
+    <string name="delete_confirm">Delete “%1$s”?</string>
+    <string name="setup_title">One more step: unlock TapOver</string>
+    <string name="setup_intro">TapOver was installed from an APK file, so Android keeps two of its permissions locked: drawing over apps and accessibility. Unlocking them is a one-time detour: Android first has to refuse once, and only then does it offer the switch to allow it.</string>
+    <string name="setup_step1_title">Let Android refuse once</string>
+    <string name="setup_step1_body">Open Accessibility and tap \"TapOver overlay\". Android refuses with \"App was denied access\", like below. That\'s expected: tap Close and come back here.</string>
+    <string name="setup_step1_button">Open accessibility</string>
+    <string name="setup_step2_title">Allow restricted settings</string>
+    <string name="setup_step2_body">Open App info, tap ⋮ in the top-right corner, then \"Allow restricted settings\", like below. Confirm if asked, then come back here.</string>
+    <string name="setup_step2_button">Open app info</string>
+    <string name="setup_step2_alt">No ⋮ menu? Redo step 1</string>
+    <string name="setup_step3_title">Turn on the permissions below</string>
+    <string name="setup_step3_body">Unlocked. Now tap Enable next to \"Accessibility service\" and Grant next to \"Draw over apps\" below. This card goes away once both are on.</string>
+    <string name="setup_overlay_locked">Complete the steps above first: Android blocks this until restricted settings are allowed.</string>
+    <string name="sponsor_title">Enjoying TapOver?</string>
+    <string name="sponsor_text">Support its development on GitHub Sponsors.</string>
+    <string name="sponsor_button">Sponsor</string>
+    <string name="sponsor_no_browser">No browser found to open %1$s</string>
+    <string name="cd_onboarding_denied">Screenshot: Android\'s \"App was denied access\" dialog with a Close button</string>
+    <string name="cd_onboarding_allow">Screenshot: App info with the ⋮ menu open, showing \"Allow restricted settings\"</string>
+    <string name="setup_step_done">✓</string>
+    <string name="cd_setup_step">Step %1$d of 3: %2$s</string>
+    <string name="cd_setup_step_done">Step %1$d of 3, done: %2$s</string>
+    <string name="editor_folder_hint_title">Picking a big folder</string>
+    <string name="editor_folder_hint">If you pick DCIM (or another folder with thousands of photos), the picker can be slow: wait about half a minute for the images to load, then press \"Use this folder\".</string>
+    <string name="editor_error_no_picker">No folder picker available on this device</string>
+    <string name="editor_error_duplicate">Another preset already targets %1$s</string>
+    <string name="editor_warn_missing_perms">Saved, but won\'t work until you grant: %1$s (see the main screen)</string>
+    <string name="perm_overlay_short">draw over apps</string>
+    <string name="perm_accessibility_short">accessibility service</string>
+    <string name="perm_media_short">media access</string>
+
+    <!-- Tap-action errors (shown on the overlay tap when the action can't complete) -->
+    <string name="action_error_launch">Can\'t open %1$s — is it installed?</string>
+    <string name="action_error_no_media">No photos or videos in the selected folder</string>
+    <string name="action_error_no_viewer">No app can open this item</string>
+    <!-- Content description of an overlay showing the lock icon (device locked; content hidden) -->
+    <string name="overlay_locked_description">TapOver overlay (content hidden while locked)</string>
+
+    <!-- Accessibility service -->
+    <string name="accessibility_service_label">TapOver overlay</string>
+    <string name="accessibility_description">TapOver reads only the foreground app\'s package name to decide when to show its tap overlay. It does not read or collect screen content.</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TapOver" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- Edge-to-edge: the app bar (colorBackground) shows through the status bar, so the
+             bar icons must be dark in the light theme and light in the dark one. -->
+        <item name="android:windowLightStatusBar">?android:attr/isLightTheme</item>
+        <item name="android:windowLightNavigationBar">?android:attr/isLightTheme</item>
+    </style>
+
+</resources>

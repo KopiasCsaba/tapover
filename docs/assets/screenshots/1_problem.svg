@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#121820"/><stop offset="1" stop-color="#07090c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="540" cy="1100" r="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0E7C66" stop-opacity="0.55"/><stop offset="1" stop-color="#0E7C66" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="screen"><rect x="216" y="430" width="648" height="1440" rx="46"/></clipPath>
+    <style>
+      text { font-family: Inter, 'DejaVu Sans', sans-serif; text-anchor: middle; }
+      .title { font-size: 82px; font-weight: 800; fill: #ffffff; letter-spacing: -1.5px; }
+      .acc { fill: #2fd3a8; }
+      .sub { font-size: 38px; font-weight: 500; fill: #a9b4c2; }
+      .pill { font-size: 40px; font-weight: 700; fill: #0b0d10; }
+    </style>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <rect width="1080" height="1920" fill="url(#glow)"/>
+  <text class="title"><tspan x="540" y="150">Camera thumbnail</tspan><tspan x="540" y="242" class="acc">goes nowhere?</tspan></text>
+  <text class="sub" x="540" y="354">Without Google Photos, it’s a dead end.</text>
+  <rect id="phone" x="200" y="414" width="680" height="1472" rx="62" fill="#0b0c0f" stroke="#39404b" stroke-width="3"/>
+  <image x="216" y="430" width="648" height="1440" preserveAspectRatio="xMidYMid slice" clip-path="url(#screen)" xlink:href="src/camera-before.jpg"/>
+  <g id="callout">
+    <circle cx="345.6" cy="1508.2" r="66" fill="none" stroke="#ff5a5f" stroke-width="18" opacity="0.25"/>
+    <circle cx="345.6" cy="1508.2" r="66" fill="none" stroke="#ff5a5f" stroke-width="6"/>
+    <path d="M 345.6 1442.2 L 345.6 1318.2" stroke="#ff5a5f" stroke-width="6" stroke-linecap="round"/>
+    <rect x="129.6" y="1244.2" width="432" height="74" rx="37" fill="#ff5a5f"/>
+    <text x="345.6" y="1294.2" class="pill">Google Photos only</text>
+  </g>
+</svg>

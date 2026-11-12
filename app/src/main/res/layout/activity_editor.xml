@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar" />
+
+    <!-- Insets are added to this padding in code; clipToPadding=false lets the form scroll
+         through the bottom padding up to the navigation bar. -->
+    <ScrollView
+        android:id="@+id/editor_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:id="@+id/editor_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:id="@+id/f_status" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone"
+            android:textColor="#D32F2F" android:layout_marginBottom="8dp" />
+
+        <!-- Live preview -->
+        <FrameLayout
+            android:id="@+id/preview_container"
+            android:layout_width="match_parent"
+            android:layout_height="320px" />
+        <CheckBox android:id="@+id/f_show_on_screen" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="48dp"
+            android:checked="true" android:text="@string/editor_show_on_screen" />
+        <TextView android:id="@+id/f_show_hint" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        <Space android:layout_width="match_parent" android:layout_height="8dp" />
+
+        <Button android:id="@+id/btn_load_template"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/editor_load_template"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_name" />
+        <EditText android:id="@+id/f_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="text" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_target_package" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/f_target_package" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:inputType="none" android:focusable="false"
+                android:focusableInTouchMode="false" android:cursorVisible="false"
+                android:longClickable="false" />
+            <Button android:id="@+id/btn_pick_target" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/editor_pick_app" />
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_target_activity" />
+        <LinearLayout android:id="@+id/f_target_activities" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_marginTop="6dp" />
+        <Button android:id="@+id/btn_pick_activity" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:minHeight="48dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:drawableStart="@drawable/ic_add" android:drawablePadding="8dp"
+            android:paddingStart="4dp" android:layout_marginStart="-4dp"
+            android:textColor="?android:attr/colorAccent"
+            android:text="@string/editor_pick_activity" />
+
+        <!-- Size/position: one set, or separate portrait and landscape sets -->
+        <CheckBox android:id="@+id/f_same_both" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:checked="true" android:text="@string/editor_same_both" />
+        <RadioGroup android:id="@+id/f_orient" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal"
+            android:checkedButton="@+id/f_orient_portrait" android:visibility="gone">
+            <RadioButton android:id="@+id/f_orient_portrait" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:minHeight="48dp" android:text="@string/editor_orient_portrait" />
+            <RadioButton android:id="@+id/f_orient_landscape" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:minHeight="48dp" android:text="@string/editor_orient_landscape" />
+        </RadioGroup>
+        <!-- Size / X / Y stepper rows are added here in code (StepperRow) -->
+        <LinearLayout android:id="@+id/f_position_rows" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
+
+        <LinearLayout android:id="@+id/f_corner_row" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_content" />
+        <Spinner android:id="@+id/f_content" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:id="@+id/label_color" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/editor_color" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/f_color" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:inputType="text" />
+            <Button android:id="@+id/btn_pick_color" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/editor_pick_color" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/label_icon" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/editor_icon" />
+        <Spinner android:id="@+id/f_icon" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_action" />
+        <Spinner android:id="@+id/f_action" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/editor_action_package" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/f_action_package" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:inputType="none" android:focusable="false"
+                android:focusableInTouchMode="false" android:cursorVisible="false"
+                android:longClickable="false" />
+            <Button android:id="@+id/btn_pick_action_app" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/editor_pick_app" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/label_action_folder" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/editor_action_folder" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/f_action_folder" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:inputType="none" android:focusable="false"
+                android:focusableInTouchMode="false" android:cursorVisible="false"
+                android:longClickable="false" />
+            <Button android:id="@+id/btn_pick_folder" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/editor_pick_folder" />
+        </LinearLayout>
+
+        <CheckBox android:id="@+id/f_show_on_lock" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="48dp"
+            android:layout_marginTop="8dp" android:text="@string/editor_show_on_lock" />
+        <TextView android:id="@+id/f_show_on_lock_hint" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorSecondary"
+            android:text="@string/editor_show_on_lock_hint" />
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

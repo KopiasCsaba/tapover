@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Outer frame takes the system-bar insets (targetSdk 35 is edge-to-edge); inner padding stays. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+<LinearLayout
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Install an APK with this package source:"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <RadioButton android:id="@+id/src_store" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="STORE (like an app store)"
+            android:checked="true" />
+        <RadioButton android:id="@+id/src_unspecified" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="UNSPECIFIED (installer app default)" />
+        <RadioButton android:id="@+id/src_local" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="LOCAL_FILE (like opening an APK)" />
+        <RadioButton android:id="@+id/src_downloaded" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="DOWNLOADED_FILE" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/pick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pick APK and install" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textIsSelectable="true" />
+</LinearLayout>
+</FrameLayout>
