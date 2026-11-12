@@ -48,7 +48,7 @@ CERTS=$({ printf '%s\n' "$KS_PASS"; cat "$SECRET_DIR/ks.p12"; } | docker run --r
         cat > /keys/ks.p12
         [ -s /keys/ks.p12 ] || { echo "error: empty keystore from KeePassXC" >&2; exit 1; }
         '"$BUILD_TOOLS"'/zipalign -f -p 4 "$1" /keys/aligned.apk >&2
-        '"$BUILD_TOOLS"'/apksigner sign --ks /keys/ks.p12 --ks-type PKCS12 --ks-key-alias "$KEY_ALIAS" \
+        '"$BUILD_TOOLS"'/apksigner sign --alignment-preserved true --ks /keys/ks.p12 --ks-type PKCS12 --ks-key-alias "$KEY_ALIAS" \
             --ks-pass env:KS_PASS --key-pass env:KS_PASS --out "$2" /keys/aligned.apk >&2
         '"$BUILD_TOOLS"'/apksigner verify --print-certs "$2"' sh "$IN" "$OUT") \
     || { rm -f "$OUT" "$OUT.idsig"; die "signing or signature verification failed"; }
