@@ -91,7 +91,7 @@ action, and drag the preview to where you want it.
 
 Example: setting up a custom dot overlay (click to watch on YouTube):
 
-[![Video: setting up a custom dot overlay in TapOver](https://img.youtube.com/vi/JEqzbESdu68/hqdefault.jpg)](https://youtu.be/JEqzbESdu68)
+[![Video: setting up a custom dot overlay in TapOver](https://img.youtube.com/vi/JEqzbESdu68/maxresdefault.jpg)](https://youtu.be/JEqzbESdu68)
 
 ## Permissions
 
