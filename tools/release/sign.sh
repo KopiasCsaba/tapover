@@ -54,7 +54,7 @@ CERTS=$({ printf '%s\n' "$KS_PASS"; cat "$SECRET_DIR/ks.p12"; } | docker run --r
     || { rm -f "$OUT" "$OUT.idsig"; die "signing or signature verification failed"; }
 rm -f "$SECRET_DIR/ks.p12" "$OUT.idsig"
 
-[ "$(grep -c '^Signer #' <<<"$CERTS")" -eq 1 ] || { rm -f "$OUT"; die "expected exactly one signer in $OUT"; }
+[ "$(grep -oE '^Signer #[0-9]+' <<<"$CERTS" | sort -u | wc -l)" -eq 1 ] || { rm -f "$OUT"; die "expected exactly one signer in $OUT"; }
 GOT=$(sed -n 's/^Signer #1 certificate SHA-256 digest: //p' <<<"$CERTS" | tr 'A-F' 'a-f')
 if [ "$GOT" != "$PINNED" ]; then
     rm -f "$OUT"
