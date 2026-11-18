@@ -56,9 +56,15 @@ setting it up takes about a minute.
 
 The same mechanism works for any app with a button that goes to the wrong place.
 
-<img src="docs/assets/comparison/comparison.jpg" width="240" alt="Without TapOver the thumbnail asks for Google Photos; with TapOver the photo opens">
+<img src="docs/assets/comparison/comparison.jpg" width="240" alt="Google Camera 'Photos required' dialog: To view your photos and media, install Google Photos from Play Store. Without TapOver vs. with TapOver">
 
-*Without TapOver, the thumbnail asks you to install Google Photos. With it, your photo opens.*
+Without TapOver, tapping the thumbnail shows this dialog:
+
+> **Photos required**\
+> To view your photos and media, install Google Photos from Play Store.\
+> *Cancel | Play Store*
+
+With TapOver, your photo opens in the gallery you actually use.
 
 ## Features
 
