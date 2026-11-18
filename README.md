@@ -33,6 +33,10 @@ button underneath doesn't fire.
 Get the latest APK from the [Releases](../../releases) page.
 F-Droid: coming soon.
 
+[<img src="docs/assets/badges/obtainium.png" height="60" alt="Get it on Obtainium">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/KopiasCsaba/tapover)
+
+Or, in [Obtainium](https://github.com/ImranR98/Obtainium), add `https://github.com/KopiasCsaba/tapover`.
+
 <p>
   <img src="docs/assets/screenshots/png/1_problem.png" width="135" alt="Camera thumbnail goes nowhere">
   <img src="docs/assets/screenshots/png/2_overlay.png" width="135" alt="TapOver thumbnail over the camera's">
