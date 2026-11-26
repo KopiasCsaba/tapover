@@ -5,7 +5,12 @@ AuthorName: Kopiás Csaba
 SourceCode: https://github.com/KopiasCsaba/tapover
 IssueTracker: https://github.com/KopiasCsaba/tapover/issues
 Changelog: https://github.com/KopiasCsaba/tapover/blob/HEAD/CHANGELOG.md
-Donate: https://kopiascsaba.hu/sponsor
+Donate:
+  - https://kopiascsaba.hu/sponsor
+  - https://github.com/sponsors/KopiasCsaba
+  - https://buymeacoffee.com/kcsaba
+  - https://buy.stripe.com/00wbJ179Q3lD4eB0U31sQ00
+  - https://buy.stripe.com/5kQbJ19hYf4l26tauD1sQ01
 Liberapay: KCsaba
 
 AutoName: TapOver
