@@ -12,10 +12,10 @@ import net.kopias.tapover.R;
 
 /**
  * The main screen's "Enjoying TapOver?" card, added as the list footer so it sits below setup and
- * the presets. Tapping it just opens the GitHub Sponsors page in the browser (no tracking).
+ * the presets. Tapping it just opens the sponsor page in the browser (no tracking).
  */
 public final class SponsorCard {
-    private static final String SPONSOR_URL = "https://github.com/sponsors/KopiasCsaba";
+    private static final String SPONSOR_URL = "https://kopiascsaba.hu/sponsor";
 
     private SponsorCard() {
     }

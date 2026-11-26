@@ -3,6 +3,10 @@
 [![License: GPL v3+](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](LICENSE)
 ![Android 10+](https://img.shields.io/badge/Android-10%2B-3ddc84?logo=android&logoColor=white)
 [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/KopiasCsaba)
+[![Liberapay](https://img.shields.io/badge/Liberapay-Donate-F6C915?logo=liberapay&logoColor=black)](https://liberapay.com/KCsaba/donate)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/kcsaba)
+[![One-time support](https://img.shields.io/badge/One--time-Support-635BFF?logo=stripe&logoColor=white)](https://buy.stripe.com/00wbJ179Q3lD4eB0U31sQ00)
+[![Monthly support](https://img.shields.io/badge/Monthly-Support-635BFF?logo=stripe&logoColor=white)](https://buy.stripe.com/5kQbJ19hYf4l26tauD1sQ01)
 
 **Put a tap target on top of any Android app, and decide what happens when you tap it.**
 
@@ -162,8 +166,13 @@ each version.
 
 ## Support
 
-If TapOver saves you a few taps a day, you can support its development through
-[GitHub Sponsors](https://github.com/sponsors/KopiasCsaba).
+If TapOver saves you a few taps a day, you can support its development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-%E2%9D%A4-db61a2?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/KopiasCsaba)
+[![Liberapay](https://img.shields.io/badge/Liberapay-Donate-F6C915?logo=liberapay&logoColor=black)](https://liberapay.com/KCsaba/donate)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-Support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/kcsaba)
+[![One-time support](https://img.shields.io/badge/One--time-Support-635BFF?logo=stripe&logoColor=white)](https://buy.stripe.com/00wbJ179Q3lD4eB0U31sQ00)
+[![Monthly support](https://img.shields.io/badge/Monthly-Support-635BFF?logo=stripe&logoColor=white)](https://buy.stripe.com/5kQbJ19hYf4l26tauD1sQ01)
 
 ## License
 

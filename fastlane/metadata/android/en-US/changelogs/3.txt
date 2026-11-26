@@ -1,0 +1,1 @@
+Updated the support links: the in-app Sponsor button now opens kopiascsaba.hu/sponsor, which lists all ways to support development (GitHub Sponsors, Liberapay, Buy Me a Coffee, one-time or monthly via Stripe). No other changes.

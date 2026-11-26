@@ -4,7 +4,15 @@ All notable changes to TapOver are listed here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow
 [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - Unreleased
+## [1.0.1] - 2026-11-26
+
+### Changed
+- The Sponsor button on the main screen now opens https://kopiascsaba.hu/sponsor, which lists
+  every way to support development, instead of GitHub Sponsors only.
+- README and `FUNDING.yml` list all support options: GitHub Sponsors, Liberapay, Buy Me a Coffee
+  and Stripe (one-time or monthly).
+
+## [1.0.0] - 2026-11-12
 
 First public release.
 
@@ -28,4 +36,5 @@ First public release.
 - Step-by-step guide for Android 13+ "restricted settings" when TapOver is installed
   from an APK file.
 
+[1.0.1]: ../../releases/tag/v1.0.1
 [1.0.0]: ../../releases/tag/v1.0.0
